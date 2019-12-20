@@ -1,7 +1,7 @@
 body {
- background: rgba(0, 0, 0, .9);
+ background: rgba(255, 255, 255, .9);
  margin: 0;
- color: #fff;
+ color: #000;
  font-family: 'Open Sans', sans-serif;
 }
 
@@ -62,6 +62,13 @@ body {
  margin: auto;
  overflow: hidden;
  padding: 3rem 1rem;
+}
+
+.grid-4 {
+ display: grid;
+ /* grid-template-columns: repear(3, 1fr); */
+ grid-template-columns: 1fr 1fr 1fr 1fr;
+ grid-gap: 20px;
 }
 
 .grid-3 {
