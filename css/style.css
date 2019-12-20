@@ -117,15 +117,16 @@ footer p {
 
 @media(max-width: 560px) {
  .header::after {
-  height: 50vh;
+  height: 30vh;
  }
  .header-content {
   top: 5%;
   margin-top: 1.5px;
+  color: #fff;
  }
  .header-content .logo {
-  height: 140px;
-  width: 140px;
+  height: 50px;
+  width: 100px;
  }
  .title {
   font-size: 2rem;
@@ -133,6 +134,7 @@ footer p {
  .header-content .text {
   display: none;
  }
+ .grid-4,
  .grid-3,
  .grid-2 {
   grid-template-columns: 1fr;
