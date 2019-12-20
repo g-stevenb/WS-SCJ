@@ -3,11 +3,13 @@ body {
  margin: 0;
  color: #000;
  font-family: 'Open Sans', sans-serif;
+ list-style: none;
+ text-decoration: none;
 }
 
 .header::after {
  content: '';
- height: 80vh;
+ height: 40vh;
  width: 100%;
  background-image: url(../img/header_bg.jpg);
  background-size: cover;
@@ -32,24 +34,25 @@ body {
 .header-content {
  position: absolute;
  z-index: 1;
- top: 10%;
+ top: 1%;
  left: 50%;
- margin-top: 40px;
+ margin-top: 1px;
  margin-left: -145px;
  text-align: center;
- width: 300px;
- height: 350px;
+ width: 400px;
+ height: 300px;
  transition: all 1000ms;
 }
 
 .header-content .logo {
- height: 70px;
- width: 150px;
+ height: 60px;
+ width: 120px;
 }
 
 .title {
  font-family: 'Oswald', sans-serif;
  font-size: 2rem;
+ margin-top: 1px;
 }
 
 .header-content .text {
@@ -62,6 +65,104 @@ body {
  margin: auto;
  overflow: hidden;
  padding: 3rem 1rem;
+}
+
+
+/*=============================================
+SLIDESHOW
+=============================================*/
+
+#slide {
+ position: relative;
+ margin: auto;
+ width: 100%;
+ overflow: hidden;
+ /* background: white; */
+}
+
+#slide ul {
+ position: relative;
+ left: 0%;
+ margin: auto;
+ height: auto;
+ width: 400%;
+ clear: both;
+ display: table;
+}
+
+#slide ul li {
+ position: inherit;
+ float: left;
+ width: 25%;
+}
+
+#slide ul li img {
+ width: 90%;
+ height: 500px !important;
+ padding: 20px;
+}
+
+#slide #paginacion {
+ position: absolute;
+ width: 100%;
+ margin: auto;
+ text-align: center;
+ bottom: 25px;
+ left: 0;
+ z-index: 1;
+}
+
+#slide #paginacion li {
+ display: inline-block;
+ margin: 0px 10px;
+ cursor: pointer;
+ opacity: .5;
+ color: purple;
+ text-shadow: 0px 0px 5px #fff;
+}
+
+#slide #paginacion li:first-child {
+ opacity: 1;
+}
+
+#slide .flechas {
+ position: absolute;
+ font-size: 4em;
+ color: purple;
+ cursor: pointer;
+ z-index: 2;
+}
+
+#slide #retroceder {
+ top: 45%;
+ left: 6%;
+}
+
+#slide #avanzar {
+ top: 45%;
+ right: 6%;
+}
+
+#slide ul li .textoSlide {
+ position: absolute;
+ width: 100%;
+ bottom: 30px;
+ left: 0;
+ text-align: center;
+ z-index: 1;
+ color: white;
+}
+
+#slide ul li .textoSlide h1 {
+ /* background: rgba(0, 0, 0, .5); */
+ padding: 5px 0;
+ color: #000;
+}
+
+#slide ul li .textoSlide h3 {
+ /* background: rgba(0, 0, 0, .5); */
+ padding-bottom: 1px;
+ color: #000;
 }
 
 .grid-4 {
@@ -201,6 +302,10 @@ footer p {
  .services {
   padding: 0.5rem 1rem;
  }
+ iframe {
+  width: 300px;
+  height: 225px;
+ }
 }
 
 @media(max-height:500px) {
@@ -210,5 +315,19 @@ footer p {
  .header-content {
   top: 0;
   margin-top: 50px;
+ }
+ /*SLIDE*/
+ #slide ul li .textoSlide {
+  display: none;
+ }
+ #slide #retroceder {
+  top: 40%;
+  font-size: 1em;
+  left: 2%;
+ }
+ #slide #avanzar {
+  top: 40%;
+  font-size: 1em;
+  right: 2%;
  }
 }
